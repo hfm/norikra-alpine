@@ -1,7 +1,7 @@
 FROM jruby:9.1-alpine
 MAINTAINER OKUMURA Takahiro <hfm.garden@gmail.com>
 
-ENV NORIKRA_VERSION=1.4.0 JOLOKIA_VERSION=1.3.5
+ENV NORIKRA_VERSION=1.5.0 JOLOKIA_VERSION=1.3.5
 
 RUN mkdir /opt/jolokia && wget -O /opt/jolokia/jolokia-jvm-agent.jar http://central.maven.org/maven2/org/jolokia/jolokia-jvm/${JOLOKIA_VERSION}/jolokia-jvm-${JOLOKIA_VERSION}-agent.jar
 RUN gem install norikra --no-document -v $NORIKRA_VERSION
